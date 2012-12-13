@@ -1,23 +1,127 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Services View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="VWWViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="VWWServicesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Tn-B6-5Nv">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="403" id="uMx-di-QO1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="0ZD-Yy-lK5"/>
+                                    <outlet property="delegate" destination="2" id="wZ9-g2-qHO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tn-B6-5Nv" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="DAQ-du-Ke6"/>
+                            <constraint firstItem="6Tn-B6-5Nv" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="FiS-co-Ilo"/>
+                            <constraint firstItem="6Tn-B6-5Nv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="152" id="Igt-VZ-TMT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6Tn-B6-5Nv" id="gze-Xe-Dcd"/>
+                        <segue destination="J50-uq-fGR" kind="modal" identifier="segueServicesToService" id="Wc5-0X-1WQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="457" y="276"/>
+        </scene>
+        <!--Service Controller-->
+        <scene sceneID="TbE-qg-kLs">
+            <objects>
+                <viewController id="J50-uq-fGR" customClass="ServiceController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijo-LV-ERg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj4-Ra-54r">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T2-Hq-gg0">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connect" destination="J50-uq-fGR" eventType="touchUpInside" id="9Rh-MB-aUa"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="status" translatesAutoresizingMaskIntoConstraints="NO" id="dfq-Ar-acW">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="xol-di-Ty7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5Pd-yL-VtT"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dfq-Ar-acW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5x6-47-Xrn"/>
+                            <constraint firstItem="hj4-Ra-54r" firstAttribute="leading" secondItem="ijo-LV-ERg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AGg-Kl-64e"/>
+                            <constraint firstAttribute="bottom" secondItem="5T2-Hq-gg0" secondAttribute="bottom" constant="92" id="Aej-Ni-9TF"/>
+                            <constraint firstAttribute="trailing" secondItem="hj4-Ra-54r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="AqJ-W5-E0i"/>
+                            <constraint firstItem="5Pd-yL-VtT" firstAttribute="centerX" secondItem="dfq-Ar-acW" secondAttribute="centerX" type="default" id="GhB-kR-MsG"/>
+                            <constraint firstItem="hj4-Ra-54r" firstAttribute="top" secondItem="ijo-LV-ERg" secondAttribute="top" constant="20" symbolic="YES" type="default" id="QLm-KB-H5l"/>
+                            <constraint firstItem="dfq-Ar-acW" firstAttribute="top" secondItem="ijo-LV-ERg" secondAttribute="top" constant="42" id="Tba-vY-AkT"/>
+                            <constraint firstItem="5Pd-yL-VtT" firstAttribute="centerX" secondItem="5T2-Hq-gg0" secondAttribute="centerX" type="default" id="fBW-0o-ftR"/>
+                            <constraint firstItem="dfq-Ar-acW" firstAttribute="leading" secondItem="ijo-LV-ERg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pm2-aq-cQo"/>
+                            <constraint firstAttribute="bottom" secondItem="5Pd-yL-VtT" secondAttribute="bottom" constant="194" id="rw8-Uy-YYW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="5T2-Hq-gg0" id="avG-5L-Ar8"/>
+                        <outlet property="serviceLabel" destination="hj4-Ra-54r" id="9JS-ZS-nC7"/>
+                        <outlet property="spinner" destination="5Pd-yL-VtT" id="NHQ-UO-B0d"/>
+                        <outlet property="statusLog" destination="dfq-Ar-acW" id="FwC-Rh-RPy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GG7-WL-aar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="276"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ServiceController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServiceController.h"/>
+            <relationships>
+                <relationship kind="action" name="connect"/>
+                <relationship kind="outlet" name="connectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="serviceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="statusLog" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="VWWServicesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VWWServicesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

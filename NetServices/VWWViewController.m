@@ -7,15 +7,16 @@
 //
 
 #import "VWWViewController.h"
-
+#import "VWWNetServices.h"
 @interface VWWViewController ()
-
+@property (nonatomic, retain) VWWNetServices* netServices;
 @end
 
 @implementation VWWViewController
 
 - (void)viewDidLoad
 {
+    self.netServices = [[VWWNetServices alloc]init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
