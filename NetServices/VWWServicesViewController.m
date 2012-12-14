@@ -9,30 +9,28 @@
 #import "VWWServicesViewController.h"
 #import "CryptoCommon.h"
 #import "ServiceController.h"
-//#import "AppDelegate.h"
 #import "CryptoServer.h"
 #import "KeyGeneration.h"
 #import "SecKeyWrapper.h"
+#import "CryptoClient.h"
 
-//@class ServiceController, KeyGeneration, CryptoServer;
-
-@interface VWWServicesViewController ()<NSNetServiceBrowserDelegate>
+@interface VWWServicesViewController ()<NSNetServiceBrowserDelegate, CryptoClientDelegate>
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) NSNetServiceBrowser * netServiceBrowser;
 @property (nonatomic, retain) NSMutableArray * services;
 @property (nonatomic, retain) KeyGeneration * keyGenerationController;
 @property (nonatomic, retain) CryptoServer * cryptoServer;
-@property (nonatomic) NSUInteger serviceIndex;
+@property (nonatomic, retain) CryptoClient * cryptoClient;
 @end
 
 @implementation VWWServicesViewController
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"segueServicesToService"]){
-        ServiceController* serviceController = segue.destinationViewController;
-        serviceController.service = [self.services objectAtIndex:self.serviceIndex];
-    }
+//    if ([segue.identifier isEqualToString:@"segueServicesToService"]){
+//        ServiceController* serviceController = segue.destinationViewController;
+//        serviceController.service = [self.services objectAtIndex:self.serviceIndex];
+//    }
 }
 - (void)viewDidLoad {
     NSMutableArray *anArray = [[NSMutableArray alloc] init];
@@ -61,12 +59,6 @@
     return self.keyGenerationController;
 }
 
-//- (ServiceController *)serviceController {
-//    if (_serviceController == nil) {
-//        _serviceController = [[ServiceController alloc] initWithNibName:@"ServiceView" bundle:nil];
-//    }
-//    return _serviceController;
-//}
 
 - (IBAction)regenerateKeys {
 //    KeyGeneration *controller = self.keyGenerationController;
@@ -136,10 +128,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    self.serviceController.service = [self.services objectAtIndex:indexPath.row];
-//	[self.navigationController pushViewController:self.serviceController animated:YES];
-    self.serviceIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"segueServicesToService" sender:self];
+    [self connectClient:[self.services objectAtIndex:indexPath.row]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -155,5 +144,47 @@
 	[super dealloc];
 }
 
+
+
+-(void)connectClient:(NSNetService*)service{
+    CryptoClient * thisClient = [[CryptoClient alloc] initWithService:service delegate:self];
+    self.cryptoClient = thisClient;
+    [self.cryptoClient runConnection];
+    [thisClient release];
+}
+
+#pragma mark - Impelments CryptoClientDelegate
+
+- (void)cryptoClientDidCompleteConnection:(CryptoClient *)cryptoClient {
+//    self.statusLog.text = [statusLog.text stringByAppendingString:@" Done\n"];
+    NSLog(@"%s Done", __FUNCTION__);
+}
+
+- (void)cryptoClientWillBeginReceivingData:(CryptoClient *)cryptClient {
+    //    self.statusLog.text = [statusLog.text stringByAppendingString:@"Receiving data..."];
+    NSLog(@"%s Receiving data...", __FUNCTION__);
+}
+
+- (void)cryptoClientDidFinishReceivingData:(CryptoClient *)cryptClient {
+    //    self.statusLog.text = [statusLog.text stringByAppendingString:@" Done\n"];
+    NSLog(@"%s Done", __FUNCTION__);
+}
+
+- (void)cryptoClientWillBeginVerifyingData:(CryptoClient *)cryptClient {
+    //    self.statusLog.text = [statusLog.text stringByAppendingString:@"Verifying blob..."];
+    NSLog(@"%s Verifying data...", __FUNCTION__);
+}
+
+- (void)cryptoClientDidFinishVerifyingData:(CryptoClient *)cryptClient verified:(BOOL)verified {
+//    self.statusLog.text = [statusLog.text stringByAppendingString:verified?@" Verified!" : @" Failed!"];
+//    [spinner stopAnimating];
+//    self.spinner.hidden = YES;
+//	self.connectButton.enabled = YES;
+    //	self.cryptoClient = nil;
+    NSLog(@"%s %s", __FUNCTION__, verified? "Verified" : "Failed");
+}
+-(void)cryptoClientDidReceiveError:(CryptoClient *)cryptoClient{
+    NSLog(@"%s", __FUNCTION__);
+}
 
 @end

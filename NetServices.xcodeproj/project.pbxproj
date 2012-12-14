@@ -12,19 +12,16 @@
 		C6FF49E6167A90D80056C40E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF49E5167A90D80056C40E /* CoreGraphics.framework */; };
 		C6FF49EC167A90D80056C40E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6FF49EA167A90D80056C40E /* InfoPlist.strings */; };
 		C6FF49EE167A90D80056C40E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF49ED167A90D80056C40E /* main.m */; };
-		C6FF49F2167A90D80056C40E /* VWWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF49F1167A90D80056C40E /* VWWAppDelegate.m */; };
 		C6FF49F4167A90D80056C40E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FF49F3167A90D80056C40E /* Default.png */; };
 		C6FF49F6167A90D80056C40E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FF49F5167A90D80056C40E /* Default@2x.png */; };
 		C6FF49F8167A90D80056C40E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FF49F7167A90D80056C40E /* Default-568h@2x.png */; };
 		C6FF49FB167A90D80056C40E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6FF49F9167A90D80056C40E /* MainStoryboard_iPhone.storyboard */; };
 		C6FF49FE167A90D80056C40E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6FF49FC167A90D80056C40E /* MainStoryboard_iPad.storyboard */; };
-		C6FF4A01167A90D80056C40E /* VWWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A00167A90D80056C40E /* VWWViewController.m */; };
 		C6FF4A09167A90D80056C40E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF4A08167A90D80056C40E /* SenTestingKit.framework */; };
 		C6FF4A0A167A90D80056C40E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF49E1167A90D80056C40E /* UIKit.framework */; };
 		C6FF4A0B167A90D80056C40E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF49E3167A90D80056C40E /* Foundation.framework */; };
 		C6FF4A13167A90D80056C40E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6FF4A11167A90D80056C40E /* InfoPlist.strings */; };
 		C6FF4A16167A90D80056C40E /* NetServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A15167A90D80056C40E /* NetServicesTests.m */; };
-		C6FF4A21167A910B0056C40E /* VWWNetServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A20167A910B0056C40E /* VWWNetServices.m */; };
 		C6FF4A29167A9C540056C40E /* VWWServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A28167A9C540056C40E /* VWWServicesViewController.m */; };
 		C6FF4A36167A9C7D0056C40E /* CryptoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A2C167A9C7D0056C40E /* CryptoClient.m */; };
 		C6FF4A37167A9C7D0056C40E /* CryptoServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A2F167A9C7D0056C40E /* CryptoServer.m */; };
@@ -32,7 +29,8 @@
 		C6FF4A39167A9C7D0056C40E /* KeyGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A33167A9C7D0056C40E /* KeyGeneration.m */; };
 		C6FF4A3A167A9C7D0056C40E /* SecKeyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A35167A9C7D0056C40E /* SecKeyWrapper.m */; };
 		C6FF4A3C167A9D490056C40E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF4A3B167A9D490056C40E /* Security.framework */; };
-		C6FF4A3F167A9DB40056C40E /* ServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A3E167A9DB40056C40E /* ServiceController.m */; };
+		C6FF4A49167B9C090056C40E /* VWWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A48167B9C090056C40E /* VWWAppDelegate.m */; };
+		C6FF4A5A167BA0B80056C40E /* VWWNetServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FF4A59167BA0B80056C40E /* VWWNetServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,23 +52,17 @@
 		C6FF49EB167A90D80056C40E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6FF49ED167A90D80056C40E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6FF49EF167A90D80056C40E /* NetServices-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetServices-Prefix.pch"; sourceTree = "<group>"; };
-		C6FF49F0167A90D80056C40E /* VWWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWAppDelegate.h; sourceTree = "<group>"; };
-		C6FF49F1167A90D80056C40E /* VWWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWAppDelegate.m; sourceTree = "<group>"; };
 		C6FF49F3167A90D80056C40E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C6FF49F5167A90D80056C40E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C6FF49F7167A90D80056C40E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C6FF49FA167A90D80056C40E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C6FF49FD167A90D80056C40E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		C6FF49FF167A90D80056C40E /* VWWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWViewController.h; sourceTree = "<group>"; };
-		C6FF4A00167A90D80056C40E /* VWWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWViewController.m; sourceTree = "<group>"; };
 		C6FF4A07167A90D80056C40E /* NetServicesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetServicesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FF4A08167A90D80056C40E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C6FF4A10167A90D80056C40E /* NetServicesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetServicesTests-Info.plist"; sourceTree = "<group>"; };
 		C6FF4A12167A90D80056C40E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6FF4A14167A90D80056C40E /* NetServicesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetServicesTests.h; sourceTree = "<group>"; };
 		C6FF4A15167A90D80056C40E /* NetServicesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetServicesTests.m; sourceTree = "<group>"; };
-		C6FF4A1F167A910B0056C40E /* VWWNetServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWNetServices.h; sourceTree = "<group>"; };
-		C6FF4A20167A910B0056C40E /* VWWNetServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWNetServices.m; sourceTree = "<group>"; };
 		C6FF4A27167A9C540056C40E /* VWWServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWServicesViewController.h; sourceTree = "<group>"; };
 		C6FF4A28167A9C540056C40E /* VWWServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWServicesViewController.m; sourceTree = "<group>"; };
 		C6FF4A2B167A9C7D0056C40E /* CryptoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoClient.h; sourceTree = "<group>"; };
@@ -85,8 +77,10 @@
 		C6FF4A34167A9C7D0056C40E /* SecKeyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecKeyWrapper.h; sourceTree = "<group>"; };
 		C6FF4A35167A9C7D0056C40E /* SecKeyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecKeyWrapper.m; sourceTree = "<group>"; };
 		C6FF4A3B167A9D490056C40E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C6FF4A3D167A9DB40056C40E /* ServiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceController.h; sourceTree = "<group>"; };
-		C6FF4A3E167A9DB40056C40E /* ServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceController.m; sourceTree = "<group>"; };
+		C6FF4A47167B9C090056C40E /* VWWAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAppDelegate.h; sourceTree = "<group>"; };
+		C6FF4A48167B9C090056C40E /* VWWAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWAppDelegate.m; sourceTree = "<group>"; };
+		C6FF4A58167BA0B80056C40E /* VWWNetServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWNetServices.h; sourceTree = "<group>"; };
+		C6FF4A59167BA0B80056C40E /* VWWNetServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWNetServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,18 +142,14 @@
 		C6FF49E7167A90D80056C40E /* NetServices */ = {
 			isa = PBXGroup;
 			children = (
+				C6FF4A4B167B9C560056C40E /* Controllers */,
+				C6FF4A4A167B9C350056C40E /* Storyboards */,
 				C6FF49E8167A90D80056C40E /* Supporting Files */,
 				C6FF4A2A167A9C7D0056C40E /* CryptoServer */,
-				C6FF49F0167A90D80056C40E /* VWWAppDelegate.h */,
-				C6FF49F1167A90D80056C40E /* VWWAppDelegate.m */,
-				C6FF49F9167A90D80056C40E /* MainStoryboard_iPhone.storyboard */,
-				C6FF49FC167A90D80056C40E /* MainStoryboard_iPad.storyboard */,
-				C6FF49FF167A90D80056C40E /* VWWViewController.h */,
-				C6FF4A00167A90D80056C40E /* VWWViewController.m */,
-				C6FF4A1F167A910B0056C40E /* VWWNetServices.h */,
-				C6FF4A20167A910B0056C40E /* VWWNetServices.m */,
 				C6FF4A27167A9C540056C40E /* VWWServicesViewController.h */,
 				C6FF4A28167A9C540056C40E /* VWWServicesViewController.m */,
+				C6FF4A58167BA0B80056C40E /* VWWNetServices.h */,
+				C6FF4A59167BA0B80056C40E /* VWWNetServices.m */,
 			);
 			path = NetServices;
 			sourceTree = "<group>";
@@ -167,6 +157,8 @@
 		C6FF49E8167A90D80056C40E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6FF4A47167B9C090056C40E /* VWWAppDelegate.h */,
+				C6FF4A48167B9C090056C40E /* VWWAppDelegate.m */,
 				C6FF49E9167A90D80056C40E /* NetServices-Info.plist */,
 				C6FF49EA167A90D80056C40E /* InfoPlist.strings */,
 				C6FF49ED167A90D80056C40E /* main.m */,
@@ -200,8 +192,6 @@
 		C6FF4A2A167A9C7D0056C40E /* CryptoServer */ = {
 			isa = PBXGroup;
 			children = (
-				C6FF4A3D167A9DB40056C40E /* ServiceController.h */,
-				C6FF4A3E167A9DB40056C40E /* ServiceController.m */,
 				C6FF4A2B167A9C7D0056C40E /* CryptoClient.h */,
 				C6FF4A2C167A9C7D0056C40E /* CryptoClient.m */,
 				C6FF4A2D167A9C7D0056C40E /* CryptoCommon.h */,
@@ -215,6 +205,22 @@
 				C6FF4A35167A9C7D0056C40E /* SecKeyWrapper.m */,
 			);
 			path = CryptoServer;
+			sourceTree = "<group>";
+		};
+		C6FF4A4A167B9C350056C40E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C6FF49F9167A90D80056C40E /* MainStoryboard_iPhone.storyboard */,
+				C6FF49FC167A90D80056C40E /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C6FF4A4B167B9C560056C40E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,16 +336,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6FF49EE167A90D80056C40E /* main.m in Sources */,
-				C6FF49F2167A90D80056C40E /* VWWAppDelegate.m in Sources */,
-				C6FF4A01167A90D80056C40E /* VWWViewController.m in Sources */,
-				C6FF4A21167A910B0056C40E /* VWWNetServices.m in Sources */,
 				C6FF4A29167A9C540056C40E /* VWWServicesViewController.m in Sources */,
 				C6FF4A36167A9C7D0056C40E /* CryptoClient.m in Sources */,
 				C6FF4A37167A9C7D0056C40E /* CryptoServer.m in Sources */,
 				C6FF4A38167A9C7D0056C40E /* CryptoServerRequest.m in Sources */,
 				C6FF4A39167A9C7D0056C40E /* KeyGeneration.m in Sources */,
 				C6FF4A3A167A9C7D0056C40E /* SecKeyWrapper.m in Sources */,
-				C6FF4A3F167A9DB40056C40E /* ServiceController.m in Sources */,
+				C6FF4A49167B9C090056C40E /* VWWAppDelegate.m in Sources */,
+				C6FF4A5A167BA0B80056C40E /* VWWNetServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,10 +453,12 @@
 		C6FF4A1A167A90D80056C40E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zakk hoyt (9ZVN82L8V9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetServices/NetServices-Prefix.pch";
 				INFOPLIST_FILE = "NetServices/NetServices-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "30250782-3B15-472A-A839-5576A4B206B4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,10 +467,12 @@
 		C6FF4A1B167A90D80056C40E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zakk hoyt (9ZVN82L8V9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetServices/NetServices-Prefix.pch";
 				INFOPLIST_FILE = "NetServices/NetServices-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "30250782-3B15-472A-A839-5576A4B206B4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -523,6 +531,7 @@
 				C6FF4A1B167A90D80056C40E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6FF4A1C167A90D80056C40E /* Build configuration list for PBXNativeTarget "NetServicesTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +540,7 @@
 				C6FF4A1E167A90D80056C40E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
